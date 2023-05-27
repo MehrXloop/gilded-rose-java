@@ -5,7 +5,8 @@ import static org.junit.Assert.*;
 
 public class GildedRoseTest {
 
-    // ------------------------------------- normal -------------------------------------------------------------------
+    // ------------------------------------- normal
+    // -------------------------------------------------------------------
     @Test
     public void testNormalItemBeforeSellDate() {
         GildedRose item = new GildedRose("normal", 10, 5);
@@ -42,7 +43,8 @@ public class GildedRoseTest {
         assertEquals(4, item.daysRemaining);
     }
 
-    // ------------------------------------- brie ---------------------------------------------------------------------
+    // ------------------------------------- brie
+    // ---------------------------------------------------------------------
     @Test
     public void testBrieBeforeSellDate() {
         GildedRose item = new GildedRose("Aged Brie", 10, 5);
@@ -106,7 +108,8 @@ public class GildedRoseTest {
         assertEquals(-2, item.daysRemaining);
     }
 
-    // ------------------------------------- sulfuras -----------------------------------------------------------------
+    // ------------------------------------- sulfuras
+    // -----------------------------------------------------------------
     @Test
     public void testSulfurasBeforeSellDate() {
         GildedRose item = new GildedRose("Sulfuras, Hand of Ragnaros", 10, 5);
@@ -134,7 +137,8 @@ public class GildedRoseTest {
         assertEquals(-1, item.daysRemaining);
     }
 
-    // ------------------------------------- sulfuras -----------------------------------------------------------------
+    // ------------------------------------- sulfuras
+    // -----------------------------------------------------------------
     @Test
     public void testBackStagePassLongBeforeSellDate() {
         GildedRose item = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 30);
@@ -235,7 +239,6 @@ public class GildedRoseTest {
     }
 
     @Test
-    @Ignore
     public void testConjuredItemBeforeSellDate() {
         GildedRose item = new GildedRose("Conjured Item", 10, 5);
         item.tick();
@@ -245,17 +248,15 @@ public class GildedRoseTest {
     }
 
     @Test
-    @Ignore
     public void testConjuredItemAtZeroQuality() {
         GildedRose item = new GildedRose("Conjured Item", 1, 1);
         item.tick();
 
         assertEquals(0, item.quality);
-        assertEquals(0,item.daysRemaining);
+        assertEquals(0, item.daysRemaining);
     }
 
     @Test
-    @Ignore
     public void testConjuredItemOnSellDate() {
         GildedRose item = new GildedRose("Conjured Item", 10, 0);
         item.tick();
@@ -265,7 +266,6 @@ public class GildedRoseTest {
     }
 
     @Test
-    @Ignore
     public void testConjuredItemOnSellDateAtZeroQuality() {
         GildedRose item = new GildedRose("Conjured Item", 0, 0);
         item.tick();
@@ -275,7 +275,6 @@ public class GildedRoseTest {
     }
 
     @Test
-    @Ignore
     public void testConjuredItemAfterSellDate() {
         GildedRose item = new GildedRose("Conjured Item", 10, -1);
         item.tick();
@@ -285,7 +284,6 @@ public class GildedRoseTest {
     }
 
     @Test
-    @Ignore
     public void testConjuredItemAfterSellDateAtZeroQuality() {
         GildedRose item = new GildedRose("Conjured Item", 0, -1);
         item.tick();
@@ -295,4 +293,3 @@ public class GildedRoseTest {
     }
 
 }
-

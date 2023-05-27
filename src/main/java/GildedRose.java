@@ -38,6 +38,12 @@ public class GildedRose {
                 quality = backstage.getQuality();
                 daysRemaining = backstage.getDaysRemaining();
                 break;
+            case "Conjured Item":
+                Conjured conjured = new Conjured(name, quality, daysRemaining);
+                conjured.tick();
+                quality = conjured.getQuality();
+                daysRemaining = conjured.getDaysRemaining();
+                break;
         }
     }
 
