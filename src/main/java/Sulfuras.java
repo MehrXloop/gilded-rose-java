@@ -5,7 +5,7 @@ public class Sulfuras extends GildedRose {
     }
 
     public void tick() {
-        // Sulfuras does not change, so no modifications are needed
+        
     }
 
     public int getQuality() {
